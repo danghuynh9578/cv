@@ -51,7 +51,7 @@ export default {
     }),
     format_date(value,dayoff){
          if (value) {
-             return moment(String(value)).add(dayoff,'d').format('DD/MM/YYYY hh:mm')
+             return moment(String(value)).add(dayoff,'d').format('DD/MM/YYYY hh:mm A')
           }
     },
     checkDay(value,dayoff) {
