@@ -302,7 +302,7 @@ const state = () => ({
             'email': 'SONVNN10@HASPLINTER.XYZ',
             'pass': '80@Minhkhai',
             'private_key': 'ITVBM3aWE9fJsHtm7mqD1x4FwkqVPIo1',
-            'ingameName': 'sonvnn110'
+            'ingameName': 'sonvnn10'
         },
         {
             'email': 'SONVNN11@HASPLINTER.XYZ',
