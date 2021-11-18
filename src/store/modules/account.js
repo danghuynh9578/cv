@@ -1,7 +1,8 @@
 const state = () => ({
     userCards: [],
+    userCards2: [],
     account : [
-        {
+    {
         'email': 'trinhtuansinh72@yopmail.com',
         'pass': 'danghuynh',
         'ingameName': 'trinhtuansinh72',
@@ -241,6 +242,158 @@ const state = () => ({
         'private_key': '5K812TgWsnECyVzekpcRgMQayQRMrhKqLgcRG6VWbeSMxG45FWU',
         'ingameName': 'ncovt4'
     }
+    ],
+    account2 : [
+        {
+            'email': 'SONVNN1@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'Wdux3p3cmmob8N1Auhm1MFELzexyjxz8',
+            'ingameName': 'sonvnn1'
+        },
+        {
+            'email': 'SONVNN2@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'zXqwt4LhHDhaSpNkNFypKWL58TW3PpmD',
+            'ingameName': 'sonvnn2'
+        },
+        {
+            'email': 'SONVNN3@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': '2qARSj9BbpzR2ZfHNnPSZvsBgon21UCf',
+            'ingameName': 'sonvnn3'
+        },
+        {
+            'email': 'SONVNN4@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'jiysgt0jwa7nEz5GVN2DnB1ODQP5K8q3',
+            'ingameName': 'sonvnn4'
+        },
+        {
+            'email': 'SONVNN5@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'wxoMIYAHg5wIsEkxkhpDN80jKbc5cit2',
+            'ingameName': 'sonvnn5'
+        },
+        {
+            'email': 'SONVNN6@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'aCfj0wUMfXbyXXJfTVEhPjU6V4R4Rjok',
+            'ingameName': 'sonvnn6'
+        },
+        {
+            'email': 'SONVNN7@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'ovob62hvZKzLiW2CA3wE7ChxqTXVi7FS',
+            'ingameName': 'sonvnn7'
+        },
+        {
+            'email': 'SONVNN8@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'CaLY4DpS7kwLPBqXngzavHspYkTD0rQm',
+            'ingameName': 'sonvnn8'
+        },
+        {
+            'email': 'SONVNN9@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'qkrW59LszXrujxP6tbPBfKcvOCXD5T0a',
+            'ingameName': 'sonvnn9'
+        },
+        {
+            'email': 'SONVNN10@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'ITVBM3aWE9fJsHtm7mqD1x4FwkqVPIo1',
+            'ingameName': 'sonvnn110'
+        },
+        {
+            'email': 'SONVNN11@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'HAvdqFbR8neDXnpSQIfhvHs9rYp1nTd7',
+            'ingameName': 'sonvnn11'
+        },
+        {
+            'email': 'SONVNN12@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': '8oETdii5SFeaqhpt1LO5TVlZFLHHX7tI',
+            'ingameName': 'sonvnn12'
+        },
+        {
+            'email': 'SONVNN13@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'Gzro6be1Tfnq7OLtmylZYIVQeV7iOgJQ',
+            'ingameName': 'sonvnn13'
+        },
+        {
+            'email': 'SONVNN14@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'FoLb5dYNBRB8MycbaRB9MYV9QFbRpPmh',
+            'ingameName': 'sonvnn14'
+        },
+        {
+            'email': 'SONVNN15@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'BwPd4BxNUmaXvX7GJJP44cMgxC8Vf0qv',
+            'ingameName': 'sonvnn15'
+        },
+        {
+            'email': 'SONVNN16@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'pmZsl5t7GXNjc7zPTHw042EMwZujK2TB',
+            'ingameName': 'sonvnn16'
+        },
+        {
+            'email': 'SONVNN17@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'bv7TdkOTrDhnETmQcnHUYT97H0f37Bi2',
+            'ingameName': 'sonvnn17'
+        },
+        {
+            'email': 'SONVNN18@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'zrqHUjfxEaN1LG1H1V5yOf2B4yWKRHhu',
+            'ingameName': 'sonvnn18'
+        },
+        {
+            'email': 'SONVNN19@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'ARQsHR1IUJQ2ps7qJFDXqcvAdEPxcAJG',
+            'ingameName': 'sonvnn19'
+        },
+        {
+            'email': 'SONVNN20@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'ywhuHH53tvpnpkPrRchSUuMrmDJP9r6k',
+            'ingameName': 'sonvnn20'
+        },
+        {
+            'email': 'SONVNN21@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'CRi8ma9OAlYWrOEM2syEwufq7d6sNGm1',
+            'ingameName': 'sonvnn21'
+        },
+        {
+            'email': 'SONVNN22@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'EqBWXJtI0YQTbNrbSeyzUMzemgV7uY4n',
+            'ingameName': 'sonvnn22'
+        },
+        {
+            'email': 'SONVNN23@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'JhueGmwPIN22kNxafoviRfNPL2DAs6Wc',
+            'ingameName': 'sonvnn23'
+        },
+        {
+            'email': 'SONVNN24@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': '9feJl0TuHioDaSWPzOU9c5v1h7ZSQjdA',
+            'ingameName': 'sonvnn24'
+        },
+        {
+            'email': 'SONVNN25@HASPLINTER.XYZ',
+            'pass': '80@Minhkhai',
+            'private_key': 'EjfNxenHnsf1XNzmwB21Tjew4YPRbH1Z',
+            'ingameName': 'sonvnn25'
+        },
     ]
 })
   import axios from 'axios';
@@ -251,6 +404,9 @@ const state = () => ({
     },
     userCard: (state) => {
         return state.userCards
+    },
+    userCard2: (state) => {
+        return state.userCards2
     }
   }
   
@@ -277,7 +433,29 @@ const state = () => ({
                     card: card})
             }
           }
-    }
+    },
+    async getAllUser2({ state, commit }) {
+        let lengthAcc = state.account2.length
+        for(let i = 0; i<= lengthAcc ;i++) {
+          let fetchCard = await axios.get(`https://api2.splinterlands.com/market/rental_history?player=` + state.account2[i].ingameName)
+          if(fetchCard.status == 200) {
+              var card
+              if(fetchCard.data.length > 0) {
+                  card = fetchCard.data.find((value) => {
+                      return value.status == 1
+                  })
+                  if(card == undefined) {
+                      card = []
+                  }
+              } else {
+                  card = []
+              }
+              commit('SETCARDUSER2', {
+                  ingame: state.account2[i],
+                  card: card})
+          }
+        }
+  }
   }
   
   // mutations
@@ -288,7 +466,14 @@ const state = () => ({
           'card':card
       }
       state.userCards.push(data)
-    }
+    },
+    SETCARDUSER2 (state, {ingame, card}) {
+        let data = {
+            'ingame':ingame,
+            'card':card
+        }
+        state.userCards2.push(data)
+      }
   }
   
   export default {
