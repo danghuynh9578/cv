@@ -13,7 +13,7 @@
           <tr v-for="(card,index) in this.userCards" :key="index">
             <td>{{card.ingame.email}}</td>
             <td>{{card.ingame.pass}}</td>
-            <td >{{card.card.buy_price}}</td>
+            <td >{{card.card}}</td>
             <td :style="checkDay(card.card.rental_date, card.card.rental_days) == 'now' ? myStyle : 
             (checkDay(card.card.rental_date, card.card.rental_days) == 'next_time' ? myStyleBlue : '' )
             ">{{ format_date(card.card.rental_date, card.card.rental_days) }}</td>

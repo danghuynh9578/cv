@@ -3,66 +3,6 @@ const state = () => ({
     userCards2: [],
     account : [
     {
-        'email': 'trinhtuansinh72@yopmail.com',
-        'pass': 'danghuynh',
-        'ingameName': 'trinhtuansinh72',
-        'private_key': 'S3s4TKX6THvVKTxS7csFck5ynQm6qgf0'
-    },
-    {
-        'email': 'nguyenvanthi72@yopmail.com',
-        'pass': 'danghuynh',
-        'ingameName': 'nguyenvanthi72',
-        'private_key': 'S3s4TKX6THvVKTxS7csFck5ynQm6qgf0'
-    },
-    {
-        'email': 'lethithin65@yopmail.com',
-        'pass': 'danghuynh',
-        'ingameName': 'lethithin65',
-        'private_key': 'S3s4TKX6THvVKTxS7csFck5ynQm6qgf0'
-    },
-    {
-        'email': 'leducthuan64@yopmail.com',
-        'pass': 'danghuynh',
-        'ingameName': 'leducthuan64',
-        'private_key': 'S3s4TKX6THvVKTxS7csFck5ynQm6qgf0'
-    },
-    {
-        'email': 'dinhngocthuy66@yopmail.com',
-        'pass': 'danghuynh',
-        'ingameName': 'dinhngocthuy66',
-        'private_key': 'S3s4TKX6THvVKTxS7csFck5ynQm6qgf0'
-    },
-    {
-        'email': 'levantrung80@yopmail.com',
-        'pass': 'danghuynh',
-        'ingameName': 'levantrung80',
-        'private_key': 'S3s4TKX6THvVKTxS7csFck5ynQm6qgf0'
-    },
-    {
-        'email': 'nguyenngoctien77@yopmail.com',
-        'pass': 'danghuynh',
-        'ingameName': 'nguyenngoctien77',
-        'private_key': 'S3s4TKX6THvVKTxS7csFck5ynQm6qgf0'
-    },
-    {
-        'email': 'lequangtuan60@yopmail.com',
-        'pass': 'danghuynh',
-        'ingameName': 'lequangtuan60',
-        'private_key': 'S3s4TKX6THvVKTxS7csFck5ynQm6qgf0'
-    },
-    {
-        'email': 'tranvantuan61@yopmail.com',
-        'pass': 'danghuynh',
-        'ingameName': 'tranvantuan61',
-        'private_key': 'S3s4TKX6THvVKTxS7csFck5ynQm6qgf0'
-    },
-    {
-        'email': 'trinhxuyen59@yopmail.com',
-        'pass': 'danghuynh',
-        'ingameName': 'trinhxuyen59',
-        'private_key': 'S3s4TKX6THvVKTxS7csFck5ynQm6qgf0'
-    },
-    {
         'email': 'taliyahholland4620@egg-mail.co',
         'pass': 'egg-mail.co@!012!@',
         'ingameName': 'taliyahholland46',
@@ -393,7 +333,7 @@ const state = () => ({
             'pass': '80@Minhkhai',
             'private_key': 'EjfNxenHnsf1XNzmwB21Tjew4YPRbH1Z',
             'ingameName': 'sonvnn25'
-        },
+        }
     ]
 })
   import axios from 'axios';
@@ -416,8 +356,14 @@ const state = () => ({
           let lengthAcc = state.account.length
           for(let i = 0; i<= lengthAcc ;i++) {
             let fetchCard = await axios.get(`https://api2.splinterlands.com/market/rental_history?player=` + state.account[i].ingameName)
+            let decEcr = await axios.get(`https://api2.splinterlands.com/players/balances?username=` + state.account[i].ingameName)
+            let countCard = await axios.get(`https://api2.splinterlands.com/cards/collection/` + state.account[i].ingameName)
+            var card
+            var power
+            var dec
+            var ecr
+            var count
             if(fetchCard.status == 200) {
-                var card
                 if(fetchCard.data.length > 0) {
                     card = fetchCard.data.find((value) => {
                         return value.status == 1
@@ -428,18 +374,37 @@ const state = () => ({
                 } else {
                     card = []
                 }
-                commit('SETCARDUSER', {
-                    ingame: state.account[i],
-                    card: card})
             }
+            if(decEcr.status == 200) {
+                dec = decEcr.data[0].balance
+                ecr = decEcr.data[5].balance
+            }
+            if(countCard.status == 200) {
+                count = countCard.data.cards.length
+            }
+            commit('SETCARDUSER', {
+                ingame: state.account[i],
+                card: card,
+                dec:dec,
+                power:power,
+                ecr:ecr,
+                count:count
+            })
           }
     },
     async getAllUser2({ state, commit }) {
         let lengthAcc = state.account2.length
         for(let i = 0; i<= lengthAcc ;i++) {
           let fetchCard = await axios.get(`https://api2.splinterlands.com/market/rental_history?player=` + state.account2[i].ingameName)
+          let decEcr = await axios.get(`https://api2.splinterlands.com/players/balances?username=` + state.account2[i].ingameName)
+          let countCard = await axios.get(`https://api2.splinterlands.com/cards/collection/` + state.account2[i].ingameName)
+          var card
+          var power
+          var dec
+          var ecr
+          var count
           if(fetchCard.status == 200) {
-              var card
+
               if(fetchCard.data.length > 0) {
                   card = fetchCard.data.find((value) => {
                       return value.status == 1
@@ -450,28 +415,34 @@ const state = () => ({
               } else {
                   card = []
               }
-              commit('SETCARDUSER2', {
-                  ingame: state.account2[i],
-                  card: card})
           }
+          if(decEcr.status == 200) {
+            dec = decEcr.data[0].balance
+            ecr = decEcr.data[5].balance
+          }
+          if(countCard.status == 200) {
+            count = countCard.data.cards.length
+          }
+          commit('SETCARDUSER2', {
+              ingame: state.account2[i],
+              card: card,
+              dec:dec,
+              power:power,
+              ecr:ecr,
+              count:count
+          })
         }
   }
   }
   
   // mutations
   const mutations = {
-    SETCARDUSER (state, {ingame, card}) {
-      let data = {
-          'ingame':ingame,
-          'card':card
-      }
+    SETCARDUSER (state, {...arrData}) {
+      let data = arrData
       state.userCards.push(data)
     },
-    SETCARDUSER2 (state, {ingame, card}) {
-        let data = {
-            'ingame':ingame,
-            'card':card
-        }
+    SETCARDUSER2 (state, {...arrData}) {
+        let data = arrData
         state.userCards2.push(data)
       }
   }
