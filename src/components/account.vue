@@ -6,6 +6,7 @@
               <tr>
                 <th scope="col">email</th>
                 <th scope="col">pass</th>
+                <th scope="col">ingame</th>
                 <th scope="col">private Key</th>
                 <th scope="col">price</th>
                 <th scope="col">date off</th>
@@ -18,6 +19,7 @@
               <tr :style="card.count > 1 ? 'background-color: orange' : ''" v-for="(card,index) in this.userCards" :key="index">
                 <td>{{card.ingame.email}}</td>
                 <td>{{card.ingame.pass}}</td>
+                <td>{{card.ingame.ingameName}}</td>
                 <td>{{card.ingame.private_key}}</td>
                 <td >{{card.card.buy_price}}</td>
                 <td :style="checkDay(card.card.rental_date, card.card.rental_days) == 'now' ? myStyle : 
